@@ -36,7 +36,7 @@
 ## Internal
 ### checkpoint_models
 * Containing models that have been saved halfway through the full training process of a model. The reason for saving these checkpoints is to allow better tracing of appropriate timesteps that can produce a better performing model.
-* 
+
 ### runs
 * Containing all the Tensorboard logs of prevously conducted trainings.
 
