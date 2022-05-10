@@ -2,6 +2,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PPO_DDPG_Comparison.utils import eval_models
 
+'''
+Handles the plotting of graph comparing the rewards obtained by the PPO with 1mil and 2mil timesteps
+'''
+
 PPO1Mil_rewards_eval = eval_models("../PPO_DDPG_Comparison/Training/Saved_Models/PPO_Model_200K")
 PPO2mil_rewards_eval = eval_models("../PPO_DDPG_Comparison/Training/Saved_Models/PPO_Model_2Mil")
 

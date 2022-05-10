@@ -7,7 +7,16 @@ from stable_baselines3.common.vec_env import DummyVecEnv
 from PPO_DDPG_Comparison.extract_rgb import RObservation
 from PPO_DDPG_Comparison.utils import environment_name
 
+'''
+In charge of running the best performing PPO model trained using the red channel
+'''
 
+'''
+Initialisation of the environment
+
+Output parameter:
+    env: representing the environment where consisting only pixel values from the red colour channel
+'''
 def make_env():
     env = gym.make(environment_name)
     env = gym.wrappers.RecordEpisodeStatistics(env)
@@ -18,7 +27,7 @@ def make_env():
 
 env = make_env()
 env = Monitor(env)
-# Change to the best red model
+# Loads the previously saved model
 model = PPO.load("../RGB_PPO/Training/Saved_Models/PPO_Red_Model", env=env)
 reward, std = evaluate_policy(model, env, n_eval_episodes=10, render=True)
 env.close()

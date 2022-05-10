@@ -1,6 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from PPO_DDPG_Comparison.utils import eval_models
+'''
+Handles the plotting of graphs comparing rewards obtained by the agent trained using PPO on colour channels
+'''
 
 Green_rewards_eval = eval_models("../RGB_PPO/Training/Saved_Models/PPO_Green_Model", "Green")
 Red_rewards_eval = eval_models("../RGB_PPO/Training/Saved_Models/PPO_Red_Model", "Red")

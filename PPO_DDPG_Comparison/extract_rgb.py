@@ -3,9 +3,16 @@ from gym import ObservationWrapper
 from gym.spaces import Box
 import cv2
 
-class RObservation(ObservationWrapper):
-    r"""Convert the image observation from RGB to R channel"""
+'''
+Converts the image observation from RGB to Red channel
 
+Input Parameter:
+    ObservationWrapper : A predefined class from gym
+    
+Return:
+    observation: The extracted red channel
+'''
+class RObservation(ObservationWrapper):
     def __init__(self, env, keep_dim=False):
         super(RObservation, self).__init__(env)
         self.keep_dim = keep_dim
@@ -33,9 +40,16 @@ class RObservation(ObservationWrapper):
         return observation
 
 
-class GObservation(ObservationWrapper):
-    r"""Convert the image observation from RGB to Green channel."""
+'''
+Converts the image observation from RGB to Green channel
 
+Input Parameter:
+    ObservationWrapper : A predefined class from gym
+
+Return:
+    observation: The extracted green channel
+'''
+class GObservation(ObservationWrapper):
     def __init__(self, env, keep_dim=False):
 
         super(GObservation, self).__init__(env)
@@ -64,9 +78,16 @@ class GObservation(ObservationWrapper):
         return observation
 
 
-class BObservation(ObservationWrapper):
-    r"""Convert the image observation from RGB to B channel"""
+'''
+Converts the image observation from RGB to Blue channel
 
+Input Parameter:
+    ObservationWrapper : A predefined class from gym
+
+Return:
+    observation: The extracted blue channel
+'''
+class BObservation(ObservationWrapper):
     def __init__(self, env, keep_dim=False):
         super(BObservation, self).__init__(env)
         self.keep_dim = keep_dim

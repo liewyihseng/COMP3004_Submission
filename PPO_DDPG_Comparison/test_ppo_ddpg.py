@@ -3,6 +3,9 @@ import numpy as np
 
 from PPO_DDPG_Comparison.utils import eval_models
 
+'''
+Handles the plotting of graph comparing the rewards obtained by the PPO and DDPG model
+'''
 
 PPO_rewards_eval = eval_models("../PPO_DDPG_Comparison/Training/Saved_Models/PPO_Model")
 DDPG_rewards_eval = eval_models("../PPO_DDPG_Comparison/Training/Saved_Models/DDPG_Model", Model="DDPG")
