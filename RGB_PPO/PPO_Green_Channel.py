@@ -6,7 +6,7 @@ from stable_baselines3.common.callbacks import CheckpointCallback
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.vec_env import DummyVecEnv, VecVideoRecorder
 
-from PPO_DDPG_Comparison.extract_rgb import GObservation
+from RGB_PPO.extract_rgb import GObservation
 from PPO_DDPG_Comparison.utils import environment_name
 
 '''

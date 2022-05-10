@@ -4,7 +4,7 @@ from stable_baselines3 import PPO, DDPG
 from stable_baselines3.common.evaluation import evaluate_policy
 from stable_baselines3.common.monitor import Monitor
 
-from PPO_DDPG_Comparison.extract_rgb import GObservation, BObservation, RObservation
+from RGB_PPO.extract_rgb import GObservation, BObservation, RObservation
 
 '''
 Serves the function to hold commonly used functions
